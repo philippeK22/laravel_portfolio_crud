@@ -21,8 +21,6 @@ class ProfilSeeder extends Seeder
                 "age"=> 26,
                 "titre"=>"full stack developpeur",
                 "email"=>"kanengelephilippe@gmail.com",
-                "adresse"=>"rue de laeken 12 1000 Bruxelles",
-                "description"=>"mon premier cv en ligne",
                 "telephone"=>486423129,
 
                 "created_at"=>now()

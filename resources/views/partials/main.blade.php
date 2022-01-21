@@ -20,6 +20,7 @@
 
                           <p><span class="title-s">Nom: </span> <span>{{ $item->nom }}</span></p>
                           <p><span class="title-s">Prenom: </span> <span>{{ $item->prenom }}</span></p>
+                          <p><span class="title-s">Age: </span> <span>{{ $item->age }}</span></p>
                           <p><span class="title-s">Profil: </span> <span>{{ $item->titre }}</span></p>
                           <p><span class="title-s">Email: </span> <span>{{ $item->email }}</span></p>
                           <p><span class="title-s">Phone: </span> <span>{{ $item->telephone }}</span></p>

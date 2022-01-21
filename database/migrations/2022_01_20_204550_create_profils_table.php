@@ -19,9 +19,7 @@ class CreateProfilsTable extends Migration
             $table->string("prenom");
             $table->integer("age");
             $table->string("titre");
-            $table->text("description",30);
             $table->string("email");
-            $table->string("adresse");
             $table->integer("telephone");
 
             $table->timestamps();

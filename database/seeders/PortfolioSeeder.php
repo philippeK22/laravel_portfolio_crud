@@ -17,7 +17,7 @@ class PortfolioSeeder extends Seeder
         DB::table('portfolios')->insert([
 
             [
-                "nom"=>"Site du chef",
+                "titre"=>"Site du chef",
                 "image"=>"img/portfolio-details-1.jpg",
                 "date"=>"17.09.21",
                 "url"=>"https://github.com/philippeK22/cs-site-chef-20",

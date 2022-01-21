@@ -25,8 +25,8 @@ Route::get('/admin/dashboard',[FrontController::class,'admin'])->name("admin");
 
 Route::get('/admin/profils',[ProfilController::class,"index"])->name("profils.index");
 
-Route::get('/admin/profils',[ProfilController::class,"create"])->name("profils.create");
+Route::get('/admin/profils/create',[ProfilController::class,"create"])->name("profils.create");
 
-
+Route::post('/admin/profils/store',[ProfilController::class,"store"])->name("profils.store");
 
 
