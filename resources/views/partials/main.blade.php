@@ -15,12 +15,16 @@
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Nom: </span> <span>Kanengele philippe</span></p>
-                        <p><span class="title-s">Profil: </span> <span>full stack developer</span></p>
-                        <p><span class="title-s">Email: </span> <span>Kanengelephilippe@gmail.com</span></p>
-                        <p><span class="title-s">Phone: </span> <span>04.86.423.129</span></p>
-                      </div>
+                        <div class="about-info">
+                          @foreach ($profils as $item)
+
+                          <p><span class="title-s">Nom: </span> <span>{{ $item->nom }}</span></p>
+                          <p><span class="title-s">Prenom: </span> <span>{{ $item->prenom }}</span></p>
+                          <p><span class="title-s">Profil: </span> <span>{{ $item->titre }}</span></p>
+                          <p><span class="title-s">Email: </span> <span>{{ $item->email }}</span></p>
+                          <p><span class="title-s">Phone: </span> <span>{{ $item->telephone }}</span></p>
+                          @endforeach
+                        </div>
                     </div>
                   </div>
                   <div class="skill-mf">

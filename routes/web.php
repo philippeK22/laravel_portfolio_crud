@@ -19,11 +19,14 @@ Route::get('/',[FrontController::class,"home"])->name("home");
 
 Route::get('/portfolio',[FrontController::class,'portfolio'])->name("portfolio");
 
+Route::get('/admin/dashboard',[FrontController::class,'admin'])->name("admin");
+
 // back admin
 
 Route::get('/admin/profils',[ProfilController::class,"index"])->name("profils.index");
 
-Route::get('/admin/dashboard',[ProfilController::class,"admin"])->name("admin");
+Route::get('/admin/profils',[ProfilController::class,"create"])->name("profils.create");
+
 
 
 

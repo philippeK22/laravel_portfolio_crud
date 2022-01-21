@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profil;
 use Illuminate\Http\Request;
 
 class ProfilController extends Controller
 {
     public function index(){
+       
 
         return view("admin.profils.main");
 
     }
 
-    public function admin(){
+   public function create(){
 
-        return view("admin.dashboard");
-        
-    }
+    return view("admin.profils.create");
+   }
+
 }
