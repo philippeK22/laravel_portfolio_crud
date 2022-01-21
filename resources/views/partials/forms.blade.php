@@ -16,7 +16,7 @@
         <input type="number" name="age" class="form-control" id="age">
       </div>
       <div class="mb-3">
-        <label for="titre" class="form-label">Titre</label>
+        <label for="titre" class="form-label">Profil</label>
         <input type="string" name="titre" class="form-control" id="titre">
       </div>
 

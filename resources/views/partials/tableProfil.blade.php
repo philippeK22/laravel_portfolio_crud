@@ -1,13 +1,13 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nom</th>
-        <th scope="col">Prenom</th>
-        <th scope="col">Age</th>
-        <th scope="col">Profil</th>
-        <th scope="col">Email</th>
-        <th scope="col">Telephone</th>
+        <th scope="col">Id</th>
+        <th scope="col">Nom:</th>
+        <th scope="col">Prenom:</th>
+        <th scope="col">Age:</th>
+        <th scope="col">Profil:</th>
+        <th scope="col">Email:</th>
+        <th scope="col">Telephone:</th>
 
       </tr>
     </thead>
@@ -21,17 +21,17 @@
           <td>{{ $item->titre }}</td>
           <td>{{ $item->email }}</td>
           <td>{{ $item->telephone}}</td>
-          <td>
-              <form action="{{ route("animal.destroy",$item->id) }}" method="POST">
+          <td style="display:flex">
+              <form action="{{ route("profils.destroy",$item->id) }}" method="POST">
                 @csrf
                 @method("DELETE")
                 <button class="btn btn-danger">Delete</button>
             </form>
             {{-- show --}}
-            <a class="btn btn-primary" href="{{ route("animal.show",$item->id) }}">show</a>
+            <a class="btn btn-primary" href="{{ route("profils.show",$item->id) }}">show</a>
 
             {{-- edit --}}
-            {{-- <a class="btn btn-success" href="{{ route("animal.edit",$item->id) }}">edit</a> --}}
+            <a class="btn btn-success" href="{{ route("profils.edit",$item->id) }}">edit</a>
 
           </td>
           @empty

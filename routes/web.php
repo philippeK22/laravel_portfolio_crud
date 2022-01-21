@@ -29,4 +29,10 @@ Route::get('/admin/profils/create',[ProfilController::class,"create"])->name("pr
 
 Route::post('/admin/profils/store',[ProfilController::class,"store"])->name("profils.store");
 
+Route::delete('/admin/profils/{id}/destroy',[ProfilController::class,"destroy"])->name("profils.destroy");
 
+Route::get('/admin/profils/{id}/show',[ProfilController::class,"show"])->name("profils.show");
+
+Route::get('/admin/profils/{id}/edit',[ProfilController::class,"edit"])->name("profils.edit");
+
+Route::put('/admin/profils/{id}/update',[ProfilController::class,"update"])->name("profils.update");
