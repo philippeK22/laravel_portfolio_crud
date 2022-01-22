@@ -4,7 +4,7 @@
       <div class="table-cell">
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="hero-title mb-4">Je suis Kanengele Philippe</h1>
+          <h1 class="hero-title mb-4"> Kanengele Philippe</h1>
           <p class="hero-subtitle"><span class="typed" data-typed-items="Full stack, Developer junior, Freelancer, "></span></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
         </div>

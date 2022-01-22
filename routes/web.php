@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\SkillController;
 use Illuminate\Support\Facades\Route;
@@ -55,3 +56,20 @@ Route::get('/admin/skills/{id}/edit',[SkillController::class,"edit"])->name("ski
 
 Route::put('/admin/skills/{id}/update',[SkillController::class,"update"])->name("skills.update");
 
+
+// back admin Portfolios
+
+
+Route::get('/admin/portfolios',[PortfolioController::class,"index"])->name("portfolios.index");
+
+Route::get('/admin/portfolios/create',[PortfolioController::class,"create"])->name("portfolios.create");
+
+Route::post('/admin/portfolios/store',[PortfolioController::class,"store"])->name("portfolios.store");
+
+Route::delete('/admin/portfolios/{id}/destroy',[PortfolioController::class,"destroy"])->name("portfolios.destroy");
+
+Route::get('/admin/portfolios/{id}/show',[PortfolioController::class,"show"])->name("portfolios.show");
+
+Route::get('/admin/portfolios/{id}/edit',[PortfolioController::class,"edit"])->name("portfolios.edit");
+
+Route::put('/admin/portfolios/{id}/update',[PortfolioController::class,"update"])->name("portfolios.update");
