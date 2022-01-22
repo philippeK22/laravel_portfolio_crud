@@ -3,7 +3,7 @@
     @csrf
 
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Nom</label>
+      <label for="nom" class="form-label">Nom</label>
       <input type="string" name="nom" class="form-control" id="nom">
 
     </div>
