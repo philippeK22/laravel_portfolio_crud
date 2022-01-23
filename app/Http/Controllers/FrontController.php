@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Portfolio;
 use App\Models\Profil;
 use App\Models\Skill;
@@ -13,13 +14,16 @@ class FrontController extends Controller
         $profils=Profil::all();
         $skills= Skill::all();
         $portfolios= Portfolio::all();
+        $contacts= Contact::all();
 
-        return view("home",compact("profils","skills","portfolios"));
+        return view("home",compact("profils","skills","portfolios","contacts"));
     }
 
     public function portfolio(){
+        
+        $myPortfolio=Portfolio::all();
 
-        return view("portfolio");
+        return view("portfolio",compact("myPortfolio"));
     }
 
     public function admin(){

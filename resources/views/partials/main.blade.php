@@ -271,7 +271,7 @@
                         </div>
                     </a>
                     <div class="work-content">
-                      
+
                   <div class="row">
                       <div class="col-sm-8">
                     <h2 class="w-title">{{ $item->titre }}</h2>
@@ -291,7 +291,7 @@
             </div>
         </div>
     </div>
-    
+
     @endforeach
 </div>
 {{-- <div class="col-md-4">
@@ -414,13 +414,13 @@
               </div>
             </div>
           </div> --}}
-          
+
         </div>
-        
+
     </div>
-    
+
     </section><!-- End Portfolio Section -->
-    
+
     <!-- ======= Testimonials Section ======= -->
     {{-- <div class="testimonials paralax-mf bg-image" style="background-image: url({{ asset("img/overlay-bg.jpg")}}">
         <div class="overlay-mf"></div>
@@ -638,23 +638,26 @@
                   </div>
                   <div class="col-md-6">
                     <div class="title-box-2 pt-4 pt-md-0">
+                        @foreach ($contacts as $item)
+
+
+
+
                       <h5 class="title-left">
-                        Get in Touch
+                        {{ $item->titre }}
                       </h5>
                     </div>
                     <div class="more-info">
                       <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
-                        expedita aperiam aliquid at.
-                        Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
-                        mollitia inventore?
+                        {{ $item->description }}
                       </p>
                       <ul class="list-ico">
-                        <li><span class="bi bi-geo-alt"></span> Rue de laeken 12, 1000 Bruxelles</li>
-                        <li><span class="bi bi-phone"></span> (+32) 486.423.129</li>
-                        <li><span class="bi bi-envelope"></span> kanengelephilippe@gmail.com</li>
+                        <li><span class="bi bi-geo-alt"></span>{{ $item->adresse }}</li>
+                        <li><span class="bi bi-phone"></span>{{ $item->telephone }}</li>
+                        <li><span class="bi bi-envelope"></span>{{ $item->email }}</li>
                       </ul>
                     </div>
+                    @endforeach
                     <div class="socials">
                       <ul>
                         <li><a href=""><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>

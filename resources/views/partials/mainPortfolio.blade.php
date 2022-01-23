@@ -4,50 +4,54 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
 
+          @foreach ($myPortfolio as $item)
         <div class="row gy-4">
 
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
 
+
+
                 <div class="swiper-slide">
-                  <img src="{{ asset("img/portfolio-details-1.jpg")}}" alt="">
+                  <img src="{{ $item->image}}" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{{ asset("img/portfolio-details-2.jpg")}}" alt="">
+                  <img src="{{$item->imageSecond}}" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{{ asset("img/portfolio-details-3.jpg")}}" alt="">
+                  <img src="{{ $item->imageThird}}" alt="">
                 </div>
 
               </div>
-              
+
               <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3>{{ $item->titre }}</h3>
               <ul>
-                <li><strong>Category</strong>: Web developpeur</li>
+                <li><strong>Category</strong>: {{ $item->description }}</li>
                 <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong>Project date</strong>: {{ $item->date }}</li>
+                <li><strong>Project URL</strong>: <a href="{{ $item->url }}">lien github</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>{{ $item->sujet }}</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                {{ $item->monTexte }}
               </p>
             </div>
           </div>
 
         </div>
 
+        @endforeach
       </div>
     </section><!-- End Portfolio Details Section -->
 
