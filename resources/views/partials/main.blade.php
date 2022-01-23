@@ -28,57 +28,58 @@
                         </div>
                     </div>
                   </div>
+                  @foreach ($skills as $item)
                   <div class="skill-mf">
-                    <p class="title-s">Skills</p>
-                    <span>HTML</span> <span class="pull-right">90%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      <p class="title-s">Skills</p>
+                      <span>{{ $item->language }}</span> <span class="pull-right">{{ $item->pourcentage }}</span>
+                      <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 90%;"  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <span>CSS3</span> <span class="pull-right">90%</span>
+                    {{-- <span>{{ $item->language }}</span> <span class="pull-right">90%</span>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <span>PHP</span> <span class="pull-right">50%</span>
+                    <span>{{ $item->language }}</span> <span class="pull-right">50%</span>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
+                    <span>{{ $item->language }}</span> <span class="pull-right">90%</span>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
+                    </div> --}}
+
                 </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        About me
-                      </h5>
-                    </div>
-                    <p class="lead">
-                      Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id
-                      imperdiet et, porttitor
-                      at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla
-                      porttitor accumsan tincidunt.
-                    </p>
-                    <p class="lead">
-                      Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
-                      porttitor volutpat. Vestibulum
-                      ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
-                    </p>
-                    <p class="lead">
-                      Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-                      Nulla porttitor accumsan
-                      tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-                    </p>
-                  </div>
-                </div>
-              </div>
+                @endforeach
             </div>
-          </div>
+            <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                        <div class="title-box-2">
+                            <h5 class="title-left">
+                                About me
+                            </h5>
+                        </div>
+                        <p class="lead">
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ullam et culpa sunt itaque nulla commodi placeat error praesentium odio veritatis sint iure mollitia exercitationem quas aliquam, aperiam officiis <br> <br> similique cumque suscipit ratione, laborum deleniti ab ipsum. Tenetur possimus dolore ut sed fugiat, nostrum quo officia culpa. Ipsam, debitis accusamus.
+                        </p>
+                        {{-- <p class="lead">
+                            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
+                            porttitor volutpat. Vestibulum
+                            ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
+                        </p>
+                        <p class="lead">
+                            Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+                            Nulla porttitor accumsan
+                            tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                        </p> --}}
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section><!-- End About Section -->
+    </div>
+</div>
+</div>
+
+</section><!-- End About Section -->
 
     <!-- ======= Services Section ======= -->
     {{-- <section id="services" class="services-mf pt-5 route">
@@ -261,72 +262,80 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="{{ asset("img/work-1.jpg")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="{{ asset("img/work-1.jpg")}}" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Lorem impsum dolor</h2>
+            <div class="col-md-4">
+                @foreach ($portfolios as $item)
+                <div class="work-box">
+                    <a href="{{ $item->image }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                        <div class="work-img">
+                            <img src="{{ $item->image }}" alt="" class="img-fluid ">
+                        </div>
+                    </a>
+                    <div class="work-content">
+                      
+                  <div class="row">
+                      <div class="col-sm-8">
+                    <h2 class="w-title">{{ $item->titre }}</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">{{ $item->date }}</span>
                     </div>
-                  </div>
-                  <div class="col-sm-4">
+                    <div>
+                        <a target="{{ $item->url }}" href="
+                        {{ $item->url }}">URL:</a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
                     <div class="w-like">
-                      <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
+                        <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="{{ asset("img/work-2.jpg")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="{{ asset("img/work-2.jpg")}}" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
+        </div>
+    </div>
+    
+    @endforeach
+</div>
+{{-- <div class="col-md-4">
+    <div class="work-box">
+        <a href="{{ asset("img/calculatrice.png")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+            <div class="work-img">
+                <img src="{{ asset("img/calculette.png")}}" alt="" class="img-fluid">
+            </div>
+        </a>
+        <div class="work-content">
+            <div class="row">
+                <div class="col-sm-8">
                     <h2 class="w-title">Loreda Cuno Nere</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                        <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
+                      <div class="w-like">
+                          <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="{{ asset("img/work-3.jpg")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="work-box">
+            <a href="{{ asset("img/emporium.png")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
                 <div class="work-img">
-                  <img src="{{ asset("img/work-3.jpg")}}" alt="" class="img-fluid">
+                    <img src="{{ asset("img/emporium.png")}}" alt="" class="img-fluid">
                 </div>
-              </a>
+            </a>
               <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Mavrito Lana Dere</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
+                  <div class="row">
+                      <div class="col-sm-8">
+                          <h2 class="w-title">Mavrito Lana Dere</h2>
+                          <div class="w-more">
+                              <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                            </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="w-like">
-                      <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
+                        <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
                     </div>
                   </div>
                 </div>
@@ -335,11 +344,11 @@
           </div>
           <div class="col-md-4">
             <div class="work-box">
-              <a href="{{ asset("img/work-4.jpg")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <a href="{{ asset("img/todolist.png")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
                 <div class="work-img">
-                  <img src="{{ asset("img/work-4.jpg")}}" alt="" class="img-fluid">
+                  <img src="{{ asset("img/todolist.png")}}" alt="" class="img-fluid">
                 </div>
-              </a>
+            </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
@@ -347,8 +356,8 @@
                     <div class="w-more">
                       <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
                     </div>
-                  </div>
-                  <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
                     <div class="w-like">
                       <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
                     </div>
@@ -359,63 +368,65 @@
           </div>
           <div class="col-md-4">
             <div class="work-box">
-              <a href="{{ asset("img/work-5.jpg")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+              <a href="{{ asset("img/e_commerce.png")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
                 <div class="work-img">
-                  <img src="{{ asset("img/work-5.jpg")}}" alt="" class="img-fluid">
+                  <img src="{{ asset("img/e_commerce.png")}}" alt="" class="img-fluid">
                 </div>
               </a>
               <div class="work-content">
-                <div class="row">
+                  <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Studio Lena Mado</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
+                      <h2 class="w-title">Studio Lena Mado</h2>
+                      <div class="w-more">
+                          <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                        </div>
                   </div>
                   <div class="col-sm-4">
-                    <div class="w-like">
+                      <div class="w-like">
                       <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
                     </div>
-                  </div>
+                </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="work-box">
-              <a href="{{ asset("img/work-6.jpg")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <a href="{{ asset("img/template_laravel.png")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
                 <div class="work-img">
-                  <img src="{{ asset("img/work-6.jpg")}}" alt="" class="img-fluid">
+                    <img src="{{ asset("img/template_laravel.png")}}" alt="" class="img-fluid">
                 </div>
               </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Studio Big Bang</h2>
+                      <h2 class="w-title">Studio Big Bang</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
+                        <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="w-like">
-                      <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
+                        <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
                     </div>
-                  </div>
                 </div>
+            </div>
               </div>
             </div>
-          </div>
-
+          </div> --}}
+          
         </div>
-      </div>
+        
+    </div>
+    
     </section><!-- End Portfolio Section -->
-
+    
     <!-- ======= Testimonials Section ======= -->
     {{-- <div class="testimonials paralax-mf bg-image" style="background-image: url({{ asset("img/overlay-bg.jpg")}}">
-      <div class="overlay-mf"></div>
+        <div class="overlay-mf"></div>
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+            <div class="col-md-12">
 
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
               <div class="swiper-wrapper">

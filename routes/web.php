@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProfilController;
@@ -73,3 +74,19 @@ Route::get('/admin/portfolios/{id}/show',[PortfolioController::class,"show"])->n
 Route::get('/admin/portfolios/{id}/edit',[PortfolioController::class,"edit"])->name("portfolios.edit");
 
 Route::put('/admin/portfolios/{id}/update',[PortfolioController::class,"update"])->name("portfolios.update");
+
+// back admin contacts
+
+Route::get('/admin/contacts',[ContactController::class,"index"])->name("contacts.index");
+
+Route::get('/admin/contacts/create',[ContactController::class,"create"])->name("contacts.create");
+
+Route::post('/admin/contacts/store',[ContactController::class,"store"])->name("contacts.store");
+
+Route::delete('/admin/contacts/{id}/destroy',[ContactController::class,"destroy"])->name("contacts.destroy");
+
+Route::get('/admin/contacts/{id}/show',[ContactController::class,"show"])->name("contacts.show");
+
+Route::get('/admin/contacts/{id}/edit',[ContactController::class,"edit"])->name("contacts.edit");
+
+Route::put('/admin/contacts/{id}/update',[ContactController::class,"update"])->name("contacts.update");
