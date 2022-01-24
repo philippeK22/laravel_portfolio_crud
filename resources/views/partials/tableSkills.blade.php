@@ -14,7 +14,7 @@
       <tr>
           <th scope="row">{{ $item->id }}</th>
           <td>{{ $item->language }}</td>
-          <td>{{ $item->pourcentage }}</td>
+          <td>{{ $item->pourcentage }}%</td>
           <td>{{ $item->description }}</td>
 
           <td style="display:flex">

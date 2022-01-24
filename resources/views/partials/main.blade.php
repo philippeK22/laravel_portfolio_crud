@@ -31,7 +31,7 @@
                   @foreach ($skills as $item)
                   <div class="skill-mf">
                       <p class="title-s">Skills</p>
-                      <span>{{ $item->language }}</span> <span class="pull-right">{{ $item->pourcentage }}</span>
+                      <span>{{ $item->language }}</span> <span class="pull-right">{{ $item->pourcentage }} %</span>
                       <div class="progress">
                           <div class="progress-bar" role="progressbar" style="width: 90%;"  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>

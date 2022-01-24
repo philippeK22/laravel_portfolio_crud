@@ -20,7 +20,13 @@ class SkillController extends Controller
 
     }
     public function store(request $request){
-        
+        request()->validate([
+            "language"=>["required","min:3","max:15"],
+            "pourcentage"=>["required","numeric"],
+            "description"=>["required"],
+
+        ]);
+
 
 
 
@@ -31,13 +37,13 @@ class SkillController extends Controller
         $skills->description= $request->description;
         $skills->save();
 
-        return redirect()->route("skills.index");
+        return redirect()->route("skills.index")->with("success","validation");
 
 
     }
     public function destroy(Skill $id){
         $id->delete();
-        return redirect()->route("skills.index");
+        return redirect()->route("skills.index")->with("warning","Donnée supprimée");
 
     }
 
