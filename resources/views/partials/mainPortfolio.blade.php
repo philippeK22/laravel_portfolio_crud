@@ -38,7 +38,7 @@
                 <li><strong>Category</strong>: {{ $item->description }}</li>
                 <li><strong>Client</strong>: ASU Company</li>
                 <li><strong>Project date</strong>: {{ $item->date }}</li>
-                <li><strong>Project URL</strong>: <a href="{{ $item->url }}">lien github</a></li>
+                <li><strong>Project URL</strong>: <a target="_blank" href="{{ $item->url }}">lien github</a></li>
               </ul>
             </div>
             <div class="portfolio-description">

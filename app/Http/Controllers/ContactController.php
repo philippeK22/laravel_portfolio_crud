@@ -22,6 +22,18 @@ class ContactController extends Controller
     }
 
     public function store(request $request){
+        request()->validate([
+
+            "titre"=>["required"],
+            "description"=>["required"],
+            "adresse"=>["required","min:15","max:50"],
+            "telephone"=>["required","numeric"],
+            "email"=>["required"],
+        ]);
+
+
+
+
         $contacts = new Contact();
         $contacts->titre= $request->titre;
         $contacts->description= $request->description;
@@ -30,7 +42,7 @@ class ContactController extends Controller
         $contacts->email= $request->email;
         $contacts->save();
 
-        return redirect()->route("contacts.index");
+        return redirect()->route("contacts.index")->with("success","validation");
 
 
     }
@@ -38,7 +50,8 @@ class ContactController extends Controller
     public function destroy(Contact $id){
 
         $id->delete();
-        return redirect()-route("contacts.index");
+
+        return redirect()->route("contacts.index")->with("warning","Donnée supprimée");
 
     }
     public function show(Contact $id){

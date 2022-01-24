@@ -1,4 +1,4 @@
-<div id="hero" class="hero route bg-image" style="background-image: url({{ asset("img/hero-bg.jpg")}}">
+<div id="hero" class="hero route bg-image" style="background-image: url({{ asset("img/background.jpg")}}">
     <div class="overlay-itro"></div>
     <div class="hero-content display-table">
       <div class="table-cell">

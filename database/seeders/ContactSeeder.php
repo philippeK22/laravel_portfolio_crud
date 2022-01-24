@@ -17,7 +17,7 @@ class ContactSeeder extends Seeder
         DB::table('contacts')->insert([
             [
                 "titre"=>"Get in touch",
-                "description"=>"voici mon formulaire de contact, dans lequel vous pourrez m'envoyer vos coordonnés àfin que je puisse rentrer en contacte avec vous merci bien à vous",
+                "description"=>"voici mon formulaire de contact, dans lequel vous pourrez m'envoyer vos coordonnés àfin que je puisse rentrer en contacte avec vous.",
                 "adresse"=>"Rue de laeken 12 1000 Bruxelles",
                 "telephone"=>486423129,
                 "email"=>"kanengelephilippe@gmail.com",

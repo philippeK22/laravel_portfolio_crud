@@ -11,7 +11,7 @@
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
             -->
-              Designed by <a target="https://github.com/philippeK22?tab=repositories" href="https://github.com/philippeK22?tab=repositories">github </a>
+              Designed by <a target="_blank" href="https://github.com/philippeK22?tab=repositories">github </a>
             </div>
           </div>
         </div>

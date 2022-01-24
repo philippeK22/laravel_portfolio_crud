@@ -21,6 +21,15 @@
           <input type="string" name="image" value="{{ $id->image }}" class="form-control" id="image">
         </div>
         <div class="mb-3">
+            <label for="imageSecond" class="form-label">Image 2:</label>
+            <input type="string" name="imageSecond" value="{{ $id->imageSecond }}" class="form-control" id="imageSecond">
+          </div>
+          <div class="mb-3">
+            <label for="imageThird" class="form-label">Image 3:</label>
+            <input type="string" name="imageThird" value="{{ $id->imageThird }}" class="form-control" id="imageThird">
+          </div>
+
+        <div class="mb-3">
             <label for="date" class="form-label">Date:</label>
             <input type="string" name="date" value="{{ $id->date }}" class="form-control" id="date">
           </div>

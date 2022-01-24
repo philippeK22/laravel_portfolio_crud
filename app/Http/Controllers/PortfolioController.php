@@ -21,20 +21,35 @@ class PortfolioController extends Controller
        }
        public function store(request $request){
 
+        request()->validate([
+
+            "titre"=>["required","min:7","max:30"],
+            "image"=>["required"],
+            "date"=>["required","numeric"],
+            "url"=>["required"],
+            "sujet"=>["required"],
+            "monTexte"=>["required"],
+            "description"=>["required"],
+        ]);
+
         $portfolios = new Portfolio();
         $portfolios->titre=$request->titre;
         $portfolios->image=$request->image;
+        $portfolios->imageSecond=$request->imageSecond;
+        $portfolios->imageThird=$request->imageThird;
         $portfolios->date=$request->date;
         $portfolios->url=$request->url;
         $portfolios->description=$request->description;
+        $portfolios->sujet=$request->sujet;
+        $portfolios->monTexte=$request->monTexte;
         $portfolios->save();
 
-        return redirect()->route("portfolios.index");
+        return redirect()->route("portfolios.index")->with("success","validation");
 
     }
     public function destroy(Portfolio $id){
         $id->delete();
-        return redirect()->route("portfolios.index");
+        return redirect()->route("portfolios.index")->with("warning","donnée supprimée");
 
     }
 
