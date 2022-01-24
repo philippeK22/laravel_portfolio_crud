@@ -20,6 +20,11 @@ class SkillController extends Controller
 
     }
     public function store(request $request){
+        
+
+
+
+
         $skills = new Skill();
         $skills->language= $request->language;
         $skills->pourcentage= $request->pourcentage;

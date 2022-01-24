@@ -21,6 +21,19 @@ class ProfilController extends Controller
    }
 
    public function store(request $request){
+       request()->validate([
+           "nom"=>["required","min:2","max:20"],
+           "prenom"=>["required","min:2","max:20"],
+           "age"=>["required","numeric"],
+           "titre"=>["required","min:2","max:20"],
+           "email"=>["required",],
+           "telephone"=>["required","numeric"],
+
+       ]);
+
+
+
+
        $profils = new Profil();
        $profils->nom =$request->nom;
        $profils->prenom =$request->prenom;
@@ -30,13 +43,13 @@ class ProfilController extends Controller
        $profils->telephone =$request->telephone;
        $profils->save();
 
-       return redirect()->route("profils.index");
+       return redirect()->route("profils.index")->with("success","validation");
 
    }
 
    public function destroy(Profil $id){
        $id->delete();
-       return redirect()->route("profils.index");
+       return redirect()->route("profils.index")->with("warning",'Donnée supprimée');
 
    }
 
@@ -66,7 +79,7 @@ class ProfilController extends Controller
 
 
    }
-   
+
 
 
 }
