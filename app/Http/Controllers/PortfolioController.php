@@ -42,6 +42,29 @@ class PortfolioController extends Controller
         $portfolios->description=$request->description;
         $portfolios->sujet=$request->sujet;
         $portfolios->monTexte=$request->monTexte;
+        // storage
+
+        $path="img/";
+        $file = $request->file("image");
+        $new_image_name=date("ymd").uniqid().'.jpg';
+
+        $file->move(public_path($path),$new_image_name);
+        $portfolios->image= $new_image_name;
+
+        $path="img/";
+        $file = $request->file("imageSecond");
+        $new_image_name=date("ymd").uniqid().'.jpg';
+
+        $file->move(public_path($path),$new_image_name);
+        $portfolios->imageSecond= $new_image_name;
+
+        $path="img/";
+        $file = $request->file("imageThird");
+        $new_image_name=date("ymd").uniqid().'.jpg';
+
+        $file->move(public_path($path),$new_image_name);
+        $portfolios->imageThird= $new_image_name;
+
         $portfolios->save();
 
         return redirect()->route("portfolios.index")->with("success","validation");

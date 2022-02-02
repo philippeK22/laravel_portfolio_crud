@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\MailboxController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\SkillController;
@@ -90,3 +91,7 @@ Route::get('/admin/contacts/{id}/show',[ContactController::class,"show"])->name(
 Route::get('/admin/contacts/{id}/edit',[ContactController::class,"edit"])->name("contacts.edit");
 
 Route::put('/admin/contacts/{id}/update',[ContactController::class,"update"])->name("contacts.update");
+
+// mailbox
+
+Route::resource("admin/mailbox", MailboxController::class);

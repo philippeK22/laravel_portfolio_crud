@@ -14,15 +14,15 @@
 
 
                 <div class="swiper-slide">
-                  <img src="{{ $item->image}}" alt="">
+                  <img src="{{ asset("img/".$item->image)}}" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{{$item->imageSecond}}" alt="">
+                  <img src="{{ asset("img/".$item->imageSecond)}}" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{{ $item->imageThird}}" alt="">
+                  <img src="{{ asset("img/".$item->imageThird)}}" alt="">
                 </div>
 
               </div>
@@ -36,7 +36,7 @@
               <h3>{{ $item->titre }}</h3>
               <ul>
                 <li><strong>Category</strong>: {{ $item->description }}</li>
-                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Client</strong>: CEO Molengeek</li>
                 <li><strong>Project date</strong>: {{ $item->date }}</li>
                 <li><strong>Project URL</strong>: <a target="_blank" href="{{ $item->url }}">lien github</a></li>
               </ul>

@@ -18,9 +18,9 @@ class PortfolioSeeder extends Seeder
 
             [
                 "titre"=>" project Site du chef",
-                "image"=>"img/site_chefs.png",
-                "imageSecond"=>"img/blogChefs.png",
-                "imageThird"=>"img/bookChefs.png",
+                "image"=>"site_chefs.png",
+                "imageSecond"=>"blogChefs.png",
+                "imageThird"=>"bookChefs.png",
                 "date"=>"17.09.21",
                 "url"=>"https://github.com/philippeK22/cs-site-chef-20",
                 "description"=>"language HTMl et CSS",
@@ -33,9 +33,9 @@ class PortfolioSeeder extends Seeder
 
             [
                 "titre"=> "project calcuatrice",
-                "image"=> "img/calculette.png",
-                "imageSecond"=>"img/calcul.png",
-                "imageThird"=>"img/myCalculette.png",
+                "image"=> "calculette.png",
+                "imageSecond"=>"calcul.png",
+                "imageThird"=>"myCalculette.png",
                 "date"=>"09.11.21",
                 "url"=> "https://github.com/philippeK22/js-dom-calculatrice",
                 "description"=>"language en Javascript",
@@ -48,9 +48,9 @@ class PortfolioSeeder extends Seeder
 
             [
                 "titre"=>"project emporium ",
-                "image"=>"img/emporium.png",
-                "imageSecond"=>"img/modal-emporium.png",
-                "imageThird"=>"img/cards-emporium.png",
+                "image"=>"emporium.png",
+                "imageSecond"=>"modal-emporium.png",
+                "imageThird"=>"cards-emporium.png",
                 "date"=>"18.12.21",
                 "url"=>"https://github.com/philippeK22/Projet-JS-Emporium",
                 "description"=>"language Javascript",
@@ -61,9 +61,9 @@ class PortfolioSeeder extends Seeder
 
             [
                 "titre"=>"project todo list ",
-                "image"=>"img/todolist.png",
-                "imageSecond"=>"img/todo.png",
-                "imageThird"=>"img/exo-todo.png",
+                "image"=>"todolist.png",
+                "imageSecond"=>"todo.png",
+                "imageThird"=>"exo-todo.png",
                 "date"=>"14.11.21",
                 "url"=>"https://github.com/philippeK22/js_dom_todolist",
                 "description"=>"language Javascript",
@@ -75,9 +75,9 @@ class PortfolioSeeder extends Seeder
             ],
             [
                 "titre"=>"project E-commerce ",
-                "image"=>"img/e_commerce.png",
-                "imageSecond"=>"img/sport-commerce.png",
-                "imageThird"=>"img/products-commerce.png",
+                "image"=>"e_commerce.png",
+                "imageSecond"=>"sport-commerce.png",
+                "imageThird"=>"products-commerce.png",
                 "date"=>"03.01.22",
                 "url"=>"https://github.com/philippeK22/react_projet_ecommerce",
                 "description"=>"language React",
@@ -89,9 +89,9 @@ class PortfolioSeeder extends Seeder
 
             [
                 "titre"=>"project DataBase Laravel",
-                "image"=>"img/template_laravel.png",
-                "imageSecond"=>"img/blog_duo.png",
-                "imageThird"=>"img/contact_duo.png",
+                "image"=>"template_laravel.png",
+                "imageSecond"=>"blog_duo.png",
+                "imageThird"=>"contact_duo.png",
                 "date"=>"15.01.22",
                 "url"=>"https://github.com/gencehangurcam/laravel_projet_duo",
                 "description"=>"language Php Laravel",

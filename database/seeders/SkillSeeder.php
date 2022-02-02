@@ -51,10 +51,14 @@ class SkillSeeder extends Seeder
             [
                 "language"=>"REACT",
                 "pourcentage"=> 80,
-                "description"=>"apprentissage react lorem...",
+                "description"=>"Je suis
+                Développeur web junior, je recherche un emploi après avoir passé 6 mois de formation dans une startup web qui est molengeek. Cette expérience m’a permis d’acquérir autonomie et confiance en moi, malgré le fait que je n'avais aucune base approfondie. J’ai ainsi pu renforcer ce que j’ai appris lors de ma formation professionnelle, et étoffer mon panel de compétences.
+
+                 Autonome de nature, je peux travailler seule ou en groupe, étant également capable de m’adapter à un environnement que je ne connais pas. Je sais faire preuve de force de proposition lorsque l’on m’en donne la liberté, cherchant toujours à améliorer et optimiser les projets au maximum pour satisfaire au mieux la demande du client. L’optimisation du code fait partie de mes priorités.",
                 "created_at"=>now()
 
             ],
+
         ]);
     }
 }

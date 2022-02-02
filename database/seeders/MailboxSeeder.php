@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class ArticleSeeder extends Seeder
+class MailboxSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +13,6 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        
+        //
     }
 }

@@ -2,7 +2,7 @@
 
 @section('content')
 <h1 class="py-5 text-center text-primary">page admin Portfolios create</h1>
-<button class="btn btn-danger"><a href="{{ route("admin") }}">retour</a></button>
+<a class="btn btn-danger" href="{{ route("admin") }}">retour</a>
 @if ($errors->any())
       <div class="alert alert-danger">
           <ul>
@@ -13,7 +13,7 @@
       </div>
 @endif
 
-<form action="{{ route("portfolios.store") }}" method="POST">
+<form action="{{ route("portfolios.store") }}" method="POST" enctype="multipart/form-data">
 
     @csrf
 
@@ -23,15 +23,15 @@
     </div>
     <div class="mb-3">
       <label for="image" class="form-label">Image:</label>
-      <input type="string" value="{{ old("image") }}" name="image" class="form-control" id="image">
+      <input type="file" value="{{ old("image") }}" name="image" class="form-control" id="image">
     </div>
     <div class="mb-3">
         <label for="imageSecond" class="form-label">Image 2:</label>
-        <input type="string" value="{{ old("imageSecond") }}" name="imageSecond" class="form-control" id="imageSecond">
+        <input type="file" value="{{ old("imageSecond") }}" name="imageSecond" class="form-control" id="imageSecond">
       </div>
       <div class="mb-3">
         <label for="imageThird" class="form-label">Image 3:</label>
-        <input type="string" value="{{ old("imageThird") }}" name="imageThird" class="form-control" id="imageThird">
+        <input type="file" value="{{ old("imageThird") }}" name="imageThird" class="form-control" id="imageThird">
       </div>
     <div class="mb-3">
         <label for="date" class="form-label">Date:</label>
