@@ -41,22 +41,6 @@
                                             style="width: {{ $item->pourcentage }}%;" aria-valuenow="85"
                                             aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    {{-- <span>{{ $item->language }}</span> <span class="pull-right">90%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 90%"
-                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span>{{ $item->language }}</span> <span class="pull-right">50%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 50%"
-                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span>{{ $item->language }}</span> <span class="pull-right">90%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 90%"
-                                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div> --}}
-
                                 </div>
                                 @endforeach
                             </div>
@@ -70,16 +54,7 @@
                                     <p class="lead">
                                       {{ $item->description }}
                                     </p>
-                                    {{-- <p class="lead">
-                            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
-                            porttitor volutpat. Vestibulum
-                            ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
-                        </p>
-                        <p class="lead">
-                            Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-                            Nulla porttitor accumsan
-                            tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-                        </p> --}}
+
                                 </div>
                             </div>
                         </div>
@@ -140,128 +115,6 @@
 
                 </div>
                 @endforeach
-                {{-- <div class="col-md-4">
-    <div class="work-box">
-        <a href="{{ asset("img/calculatrice.png")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                    <img src="{{ asset("img/calculette.png")}}" alt="" class="img-fluid">
-                </div>
-                </a>
-                <div class="work-content">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h2 class="w-title">Loreda Cuno Nere</h2>
-                            <div class="w-more">
-                                <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="w-like">
-                                <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="work-box">
-                <a href="{{ asset("img/emporium.png")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                    <div class="work-img">
-                        <img src="{{ asset("img/emporium.png")}}" alt="" class="img-fluid">
-                    </div>
-                </a>
-                <div class="work-content">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h2 class="w-title">Mavrito Lana Dere</h2>
-                            <div class="w-more">
-                                <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="w-like">
-                                <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="work-box">
-                <a href="{{ asset("img/todolist.png")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                    <div class="work-img">
-                        <img src="{{ asset("img/todolist.png")}}" alt="" class="img-fluid">
-                    </div>
-                </a>
-                <div class="work-content">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h2 class="w-title">Bindo Laro Cado</h2>
-                            <div class="w-more">
-                                <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="w-like">
-                                <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="work-box">
-                <a href="{{ asset("img/e_commerce.png")}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                    <div class="work-img">
-                        <img src="{{ asset("img/e_commerce.png")}}" alt="" class="img-fluid">
-                    </div>
-                </a>
-                <div class="work-content">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h2 class="w-title">Studio Lena Mado</h2>
-                            <div class="w-more">
-                                <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="w-like">
-                                <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="work-box">
-                <a href="{{ asset("img/template_laravel.png")}}" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox">
-                    <div class="work-img">
-                        <img src="{{ asset("img/template_laravel.png")}}" alt="" class="img-fluid">
-                    </div>
-                </a>
-                <div class="work-content">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h2 class="w-title">Studio Big Bang</h2>
-                            <div class="w-more">
-                                <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="w-like">
-                                <a href="{{ route("portfolio") }}"> <span class="bi bi-plus-circle"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-
         </div>
 
         </div>
